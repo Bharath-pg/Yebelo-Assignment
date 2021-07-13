@@ -1,0 +1,6 @@
+Created API Layer which supports GET and POST requests
+Service layer which has an separate interface and also implementation
+Repository which extends JPA Repository
+Created entity for variables
+
+All the layers are created in separate packages
