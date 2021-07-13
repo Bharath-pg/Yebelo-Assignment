@@ -1,0 +1,4 @@
+Features implemented:
+POST: localhost:8080/save   (Saves categoryCode and value)
+GET: localhost:8080/fetchAll  (Retrieves all the data)
+GET: localhost:8080/fetchvalue/{code}   (Retrieves data based on category code)
