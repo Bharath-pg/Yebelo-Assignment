@@ -4,9 +4,12 @@ import com.example.demo.entity.FetchNumber;
 import com.example.demo.service.FetchNumberService;
 import com.example.demo.service.FetchNumberServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 public class FetchNumberController {
@@ -17,6 +20,11 @@ public class FetchNumberController {
     @PostMapping("/save")
     public FetchNumber saveCategoryCode(@RequestBody FetchNumber fetchNumber) {
         return fetchNumberService.saveCategoryCode(fetchNumber);
+    }
+
+    @GetMapping("/FetchNextNumber")
+    public List<FetchNumber> fetchValue() {
+        return fetchNumberService.fetchValue();
     }
 
 }

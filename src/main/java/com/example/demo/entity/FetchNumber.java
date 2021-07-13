@@ -12,7 +12,7 @@ public class FetchNumber {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String CategoryCode;
+    private String categoryCode;
     private Long value;
 
     public Long getId() {
@@ -24,11 +24,11 @@ public class FetchNumber {
     }
 
     public String getCategoryCode() {
-        return CategoryCode;
+        return categoryCode;
     }
 
     public void setCategoryCode(String categoryCode) {
-        CategoryCode = categoryCode;
+        this.categoryCode = categoryCode;
     }
 
     public Long getValue() {
@@ -41,7 +41,7 @@ public class FetchNumber {
 
     public FetchNumber(Long id, String categoryCode, Long value) {
         this.id = id;
-        CategoryCode = categoryCode;
+        this.categoryCode = categoryCode;
         this.value = value;
     }
 
@@ -52,7 +52,7 @@ public class FetchNumber {
     public String toString() {
         return "FetchNumber{" +
                 "id=" + id +
-                ", CategoryCode='" + CategoryCode + '\'' +
+                ", CategoryCode='" + categoryCode + '\'' +
                 ", value=" + value +
                 '}';
     }
