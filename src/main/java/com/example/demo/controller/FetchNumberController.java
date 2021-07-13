@@ -4,10 +4,7 @@ import com.example.demo.entity.FetchNumber;
 import com.example.demo.service.FetchNumberService;
 import com.example.demo.service.FetchNumberServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,9 +19,14 @@ public class FetchNumberController {
         return fetchNumberService.saveCategoryCode(fetchNumber);
     }
 
-    @GetMapping("/FetchNextNumber")
+    @GetMapping("/fetchAll")
     public List<FetchNumber> fetchValue() {
         return fetchNumberService.fetchValue();
+    }
+
+    @GetMapping("/fetchvalue/{code}")
+    public FetchNumber fetchValueByCategoryCode(@PathVariable("code") String categoryCode) {
+        return fetchNumberService.fetchValueByCategoryCode(categoryCode);
     }
 
 }

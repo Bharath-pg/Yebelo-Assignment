@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface FetchNumberRepository extends JpaRepository<FetchNumber, Long> {
 
+    public FetchNumber findByCategoryCode(String categoryCode);
 }

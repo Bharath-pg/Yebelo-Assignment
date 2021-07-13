@@ -22,4 +22,9 @@ public class FetchNumberServiceImpl implements FetchNumberService{
     public List<FetchNumber> fetchValue() {
         return fetchNumberRepository.findAll();
     }
+
+    @Override
+    public FetchNumber fetchValueByCategoryCode(String categoryCode) {
+        return fetchNumberRepository.findByCategoryCode(categoryCode);
+    }
 }
