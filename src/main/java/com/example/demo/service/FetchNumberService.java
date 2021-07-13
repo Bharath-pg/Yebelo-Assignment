@@ -10,4 +10,5 @@ public interface FetchNumberService {
     public List<FetchNumber> fetchValue();
 
     public FetchNumber fetchValueByCategoryCode(String categoryCode);
+    
 }
